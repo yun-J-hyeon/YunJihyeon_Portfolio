@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윤지현 | 3D 모델러 포트폴리오</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --tag-bg: #f1f5f9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            padding: 48px;
+            border: 1px solid var(--border);
+        }
+
+        /* Profile Header */
+        .profile-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 32px;
+            margin-bottom: 36px;
+        }
+
+        .name-title {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .name-title h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+        }
+
+        .badge {
+            background-color: #eff6ff;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            border: 1px solid #bfdbfe;
+        }
+
+        .tagline {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .contact-list {
+            display: flex;
+            gap: 16px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Layout */
+        .section {
+            margin-bottom: 36px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Card / Item List */
+        .item-card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .item-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .item-date {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .item-sub {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Empty State */
+        .empty-card {
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            background: #fafafa;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px;
+            }
+            .name-title h1 {
+                font-size: 1.75rem;
+            }
+            .item-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <!-- 프로필 헤더 -->
+        <header class="profile-header">
+            <div class="name-title">
+                <h1>윤지현</h1>
+                <span class="badge">3D 모델러</span>
+            </div>
+            <p class="tagline">"몰입감을 만드는 3D모델러"</p>
+            
+            <div class="contact-list">
+                <div class="contact-item">
+                    <span>✉️</span>
+                    <a href="mailto:yjh2814@naver.com">yjh2814@naver.com</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 학력 섹션 -->
+        <section class="section">
+            <h2 class="section-title">학력</h2>
+            <div class="item-card">
+                <div class="item-header">
+                    <span class="item-title">유한대학교</span>
+                    <span class="item-date">2023.03 ~ 현재</span>
+                </div>
+                <div class="item-sub">컴퓨터공학과 게임콘텐츠전공</div>
+            </div>
+        </section>
+
+        <!-- 경력 섹션 -->
+        <section class="section">
+            <h2 class="section-title">경력</h2>
+            <div class="empty-card">
+                경력 사항을 작성 중입니다.
+            </div>
+        </section>
+
+        <!-- 프로젝트 섹션 -->
+        <section class="section">
+            <h2 class="section-title">프로젝트 경험</h2>
+            <div class="empty-card">
+                진행한 프로젝트 및 작품 설명을 작성 중입니다.
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
