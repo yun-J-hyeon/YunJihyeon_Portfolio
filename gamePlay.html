@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윤지현 | 게임 플레이 이력</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --tag-bg: #f1f5f9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            padding: 48px;
+            border: 1px solid var(--border);
+        }
+
+        /* Profile Header */
+        .profile-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 32px;
+            margin-bottom: 36px;
+        }
+
+        .name-title {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .name-title h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+        }
+
+        .badge {
+            background-color: #eff6ff;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            border: 1px solid #bfdbfe;
+        }
+
+        .tagline {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Section Layout */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Table */
+        .table-wrap {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        thead th {
+            background-color: var(--tag-bg);
+            color: var(--text-main);
+            font-weight: 700;
+            text-align: left;
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+        }
+
+        tbody td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-main);
+            vertical-align: top;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fafbfc;
+        }
+
+        td:first-child, th:first-child {
+            text-align: center;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .col-app {
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .col-desc {
+            color: var(--text-muted);
+            min-width: 260px;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px;
+            }
+            .name-title h1 {
+                font-size: 1.75rem;
+            }
+            .table-wrap {
+                overflow-x: auto;
+            }
+            table {
+                min-width: 640px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <!-- 프로필 헤더 -->
+        <header class="profile-header">
+            <div class="name-title">
+                <h1>윤지현</h1>
+                <span class="badge">게임 플레이 이력</span>
+            </div>
+            <p class="tagline">지금까지 플레이한 게임들의 기록</p>
+        </header>
+
+        <!-- 순위권 게임 플레이 이력 (모바일) -->
+        <section class="section">
+            <h2 class="section-title">순위권 게임 플레이 이력 (모바일)</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>순번</th>
+                            <th>앱</th>
+                            <th>기간</th>
+                            <th>레벨/티어</th>
+                            <th>장르</th>
+                            <th>게임 설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td class="col-app">제우스: 오만의 신</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>2</td><td class="col-app">리니지M</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>3</td><td class="col-app">SOL: enchant</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>4</td><td class="col-app">WOS: 화이트아웃 서바이벌</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>5</td><td class="col-app">킹샷:Kingshot</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>6</td><td class="col-app">오딘: 발할라 라이징</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>7</td><td class="col-app">메이플 키우기</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>8</td><td class="col-app">이클립스: 더 어웨이크닝</td><td></td><td></td><td></td><td class="col-desc">Google, App Store 공동 1위</td></tr>
+                        <tr><td>9</td><td class="col-app">로블록스 (Roblox)</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>10</td><td class="col-app">가십하버: 합성 & 스토리 게임</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>11</td><td class="col-app">로얄 매치 Royal Match</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>12</td><td class="col-app">운빨존많겜</td><td></td><td></td><td></td><td class="col-desc">15 -> 11로 순위 올라감</td></tr>
+                        <tr><td>13</td><td class="col-app">라스트 워: 서바이벌</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                        <tr><td>14</td><td class="col-app">열혈강호: 넥스트</td><td></td><td></td><td></td><td class="col-desc"></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- PC -->
+        <section class="section">
+            <h2 class="section-title">PC</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>순번</th>
+                            <th>앱</th>
+                            <th>기간</th>
+                            <th>레벨/티어</th>
+                            <th>장르</th>
+                            <th>게임 설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="col-app">파이널판타지14</td>
+                            <td>9년</td>
+                            <td>85</td>
+                            <td>MMORPG</td>
+                            <td class="col-desc">스퀘어에닉스가 서비스하는 대규모 다중접속 온라인 롤플레잉 게임으로, 판타지 세계 에오르제아를 배경으로 다양한 직업과 방대한 스토리 콘텐츠를 즐길 수 있다.<br>처음 접한 RPG게임으로, 스토리가 제일 큰 재미요소였다.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="col-app">스타듀밸리</td>
+                            <td>4년</td>
+                            <td></td>
+                            <td>농장 시뮬레이션</td>
+                            <td class="col-desc">물려받은 농장을 가꾸며 작물 재배, 목축, 낚시, 채굴과 마을 주민들과의 교류를 즐기는 인디 농장 시뮬레이션 게임이다.<br>낚시하는 것이 제일 재미있었으며 농장 관리는 신경쓸 부분이 많아서 번거롭다고 느꼈다.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="col-app">호그와트 레거시</td>
+                            <td>3년</td>
+                            <td>34</td>
+                            <td>오픈월드 액션 RPG</td>
+                            <td class="col-desc">해리포터 세계관을 배경으로 호그와트 마법학교 학생이 되어 마법을 배우고 넓은 오픈월드를 탐험하는 액션 RPG이다.<br>해리포터 세계관의 팬이기 때문에 높은 구현도에 감명받았고, 액션도 빌드에 따라 색다른 전투를 즐길 수 있어서 좋았다.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="col-app">P의 거짓</td>
+                            <td>2개월</td>
+                            <td>283</td>
+                            <td>소울라이크 액션 RPG</td>
+                            <td class="col-desc">피노키오 이야기를 다크판타지로 재해석한 국산 소울라이크 액션 RPG로, 높은 난이도의 전투와 선택에 따라 결말이 바뀌는 스토리가 특징이다.<br>처음 접한 소울라이크 게임이었는데 완성도가 매우 높고 '손맛'이 좋아서(게임패드 사용) 회차 플레이를 하고 있다.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="col-app">진・삼국무쌍 ORIGINS</td>
+                            <td>1개월</td>
+                            <td>73</td>
+                            <td>액션(무쌍)</td>
+                            <td class="col-desc">삼국지를 배경으로 한 무쌍 시리즈 최신작으로, 무명의 장수가 되어 대규모 전장에서 다수의 적을 상대하는 핵 앤 슬래시 액션 게임이다.<br>원래 나는 게임을 스토리 위주로 평가하는데, 이 게임은 스토리 요소가 아주 훌륭하고 호평받고있고, 나도 스토리를 매우 잘 녹여냈다고 생각하지만 그럼에도 불구하고 스토리가 방해된다고 느낄 정도로 액션의 즐거움이 매우 컸다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 모바일 -->
+        <section class="section">
+            <h2 class="section-title">모바일</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>순번</th>
+                            <th>앱</th>
+                            <th>기간</th>
+                            <th>레벨/티어</th>
+                            <th>장르</th>
+                            <th>게임 설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td class="col-app">디모</td><td>1년</td><td>없음</td><td>리듬게임</td><td class="col-desc">떨어지는 노트를 터치해 연주하는 감성적인 스토리 중심의 모바일 리듬 게임이다.</td></tr>
+                        <tr><td>2</td><td class="col-app">러브라이브 스쿠페스</td><td>3년</td><td>150 이상</td><td>리듬게임</td><td class="col-desc">러브라이브! 시리즈를 기반으로 한 아이돌 육성 리듬 게임으로, 카드를 수집해 유닛을 편성하고 악곡에 맞춰 노트를 터치하며 플레이한다.</td></tr>
+                        <tr><td>3</td><td class="col-app">뱅드림</td><td>4년</td><td>130 이상</td><td>리듬게임</td><td class="col-desc">밴드 소녀들의 이야기를 다루는 반드림! 시리즈의 리듬 게임으로, 밴드 곡에 맞춰 노트를 연주하고 캐릭터 카드를 육성한다.</td></tr>
+                        <tr><td>4</td><td class="col-app">쿠키런 오븐브레이크</td><td>2년</td><td></td><td>러닝 액션</td><td class="col-desc">쿠키들이 마녀의 오븐에서 탈출한다는 설정의 원터치 조작 러닝 액션 게임으로, 장애물을 피해 최대한 멀리 달리는 것이 핵심이다.</td></tr>
+                        <tr><td>5</td><td class="col-app">호그와트 미스테리</td><td>2년</td><td></td><td>스토리 시뮬레이션</td><td class="col-desc">해리포터 세계관에서 자신만의 캐릭터로 호그와트에 입학해 수업을 듣고 선택에 따라 스토리가 전개되는 시뮬레이션 게임이다.</td></tr>
+                        <tr><td>6</td><td class="col-app">앙상블 스타즈</td><td>2년</td><td></td><td>육성 시뮬레이션</td><td class="col-desc">남성 아이돌 육성을 소재로 한 일본의 카드 수집형 리듬 게임으로, 캐릭터 스토리와 뽑기가 중심이다.</td></tr>
+                        <tr><td>7</td><td class="col-app">DREAM!ing</td><td>1년</td><td></td><td>육성 시뮬레이션</td><td class="col-desc">학생들이 라이브 무대를 목표로 성장해가는 이야기를 다룬 일본의 육성형 게임으로, 2021년 5월 서비스가 종료되었다.</td></tr>
+                        <tr><td>8</td><td class="col-app">로드 오브 히어로즈</td><td>5년</td><td></td><td>수집형 RPG</td><td class="col-desc">다양한 영웅을 수집해 파티를 구성하고 턴제 전투로 진행하는 수집형 RPG이다.</td></tr>
+                        <tr><td>9</td><td class="col-app">쿠키런 킹덤</td><td>1년</td><td>8</td><td>수집형 RPG</td><td class="col-desc">쿠키들을 수집해 왕국을 건설하고 파티 전투를 즐기는 RPG로, 왕국 꾸미기 콘텐츠와 스토리가 함께 제공된다.</td></tr>
+                        <tr><td>10</td><td class="col-app">THE IDOLM@STER SideM<br>GROWING STARS</td><td>1년</td><td>138</td><td>리듬게임/육성 시뮬레이션</td><td class="col-desc">아이돌마스터 사이드엠을 기반으로 한 프로듀서 육성 리듬 게임으로, 남성 아이돌을 키워 라이브 무대에 세우는 것이 목표였으며 2023년 7월 서비스가 종료되었다.</td></tr>
+                        <tr><td>11</td><td class="col-app">붕괴 스타레일</td><td>2년</td><td>50</td><td>턴제 수집형 RPG</td><td class="col-desc">호요버스가 개발한 우주 배경의 턴제 수집형 RPG로, 다양한 캐릭터를 육성해 전략적인 전투를 즐길 수 있다.</td></tr>
+                        <tr><td>12</td><td class="col-app">식물어</td><td>1년</td><td>100</td><td>턴제 수집형 RPG</td><td class="col-desc">중화요리의 신의 후예가 되어 기억을 잃은 식혼(중화요리 의인화)들을 수집하고 육성하며 방대한 스토리를 따라 모험하는 판타지 수집형 RPG 게임이다. 2025년 3월 서비스가 종료되었다.</td></tr>
+                        <tr><td>13</td><td class="col-app">AFK 새로운 여정</td><td>2년</td><td></td><td>방치형 RPG</td><td class="col-desc">캐릭터를 자동으로 성장시키는 방치형(放置型) 수집 RPG로, 다양한 영웅을 조합해 전투를 자동으로 진행하는 것이 특징이다.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
